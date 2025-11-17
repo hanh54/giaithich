@@ -4,16 +4,16 @@
  * Website: Hệ Thống chăm sóc thú y / PetCare
  */
 
-namespace PetCare;
+namespace PetCare; // tránh xung đột \Petcare\user
 
-use PDO;
-use PDOException;
+use PDO; //PHP database objects, kết nối csdl
+use PDOException; // xử lý lỗi csdl
 
 
-date_default_timezone_set('Asia/Ho_Chi_Minh'); // Múi giờ Việt Nam
+date_default_timezone_set('Asia/Ho_Chi_Minh'); // Múi giờ Việt Nam, dùng thiết lập múi giờ cho tất cả các hàm xử lý ngày giờ
 
 // Hằng số cấu hình cơ bản
-define('BASE_URL', 'http://localhost/petcare');
+define('BASE_URL', 'http://localhost/petcare'); // định nghĩa hằng số , khác với biến là giá trị hằng số không thay đổi trong quá trình chạy
 define('DEFAULT_LANGUAGE', 'vi');
 
 /**
