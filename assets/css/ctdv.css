@@ -1,0 +1,174 @@
+/* Reset mặc định để đảm bảo giao diện nhất quán */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container chính */
+.container {
+    max-width: 800px; /* Chiều rộng vừa phải cho chi tiết */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* Thông báo lỗi */
+p[style*="color: red"] {
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Chi tiết dịch vụ */
+.vaccine-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Hình ảnh dịch vụ */
+.vaccine-detail img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Tiêu đề dịch vụ */
+.vaccine-detail h3 {
+    color: #34495e;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Thông tin chi tiết */
+.vaccine-detail p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.vaccine-detail p strong {
+    color: #333;
+}
+
+/* Nút hành động */
+.vaccine-detail .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.vaccine-detail .btn:hover {
+    background-color: #2980b9;
+}
+
+.vaccine-detail .btn:active {
+    background-color: #1f618d;
+}
+
+.vaccine-detail .btn-secondary {
+    background-color: #7f8c8d;
+}
+
+.vaccine-detail .btn-secondary:hover {
+    background-color: #6c7778;
+}
+
+.vaccine-detail .btn-secondary:active {
+    background-color: #596364;
+}
+
+/* Liên kết trong thông báo */
+.vaccine-detail p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.vaccine-detail p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .vaccine-detail img {
+        height: 200px;
+    }
+
+    .vaccine-detail h3 {
+        font-size: 20px;
+    }
+
+    .vaccine-detail p {
+        font-size: 14px;
+    }
+
+    .vaccine-detail .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .vaccine-detail img {
+        height: 150px;
+    }
+
+    .vaccine-detail h3 {
+        font-size: 18px;
+    }
+
+    .vaccine-detail p {
+        font-size: 13px;
+    }
+
+    .vaccine-detail .btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,181 @@
+/* ==========================================
+   🎨 HỒ SƠ KHÁCH HÀNG - PETCARE THEME (CAM XANH)
+   ========================================== */
+
+/* Bảng màu gốc */
+:root {
+  --main-orange: #F7941D;
+  --main-blue: #0099CC;
+  --light-blue: #E6F7FA;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --white: #FFFFFF;
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== BỐ CỤC CHUNG ========== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 30px 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* ========== TIÊU ĐỀ ========== */
+.container h2 {
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ========== KHỐI THÔNG TIN & DANH SÁCH ========== */
+.profile-info, .pet-list, .pet-add, .pet-edit {
+  margin-bottom: 35px;
+  border: 1px solid #d9eaf2;
+  background-color: #fefefe;
+  border-radius: var(--border-radius);
+  padding: 25px 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.profile-info:hover, .pet-list:hover, .pet-add:hover, .pet-edit:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.profile-info h3, .pet-list h3, .pet-add h3, .pet-edit h3 {
+  color: var(--main-orange);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--main-blue);
+  padding-bottom: 8px;
+}
+
+/* ========== FORM ========== */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--main-blue);
+  outline: none;
+}
+
+/* ========== NÚT ========== */
+.btn {
+  background-color: var(--main-orange);
+  color: var(--white);
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #e88300;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--main-blue);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #0077aa;
+}
+
+.btn-small {
+  background-color: var(--main-blue);
+  color: var(--white);
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.btn-small:hover {
+  background-color: #0077aa;
+}
+
+/* ========== DANH SÁCH THÚ CƯNG ========== */
+.pet-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pet-list li {
+  background: var(--light-blue);
+  border: 1px solid #cce7f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pet-list li form {
+  display: inline;
+}
+
+/* ========== FORM THÊM/SỬA THÚ CƯNG ========== */
+.pet-add, .pet-edit {
+  background-color: #fdfdfd;
+}
+
+/* ========== THÔNG BÁO LỖI ========== */
+p[style*="color: red"] {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ========== NÚT QUAY LẠI ========== */
+.container > .btn-secondary:last-of-type {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+}

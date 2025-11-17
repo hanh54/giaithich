@@ -1,0 +1,177 @@
+/* Reset mặc định để đảm bảo giao diện nhất quán */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container chính */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* Thông báo lỗi */
+p[style*="color: red"] {
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Danh sách dịch vụ */
+.vaccine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Mỗi mục dịch vụ */
+.vaccine-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vaccine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hình ảnh dịch vụ */
+.vaccine-item img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Tiêu đề dịch vụ */
+.vaccine-item h3 {
+    color: #34495e;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Thông tin dịch vụ */
+.vaccine-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Nút hành động */
+.vaccine-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.vaccine-item .btn:hover {
+    background-color: #2980b9;
+}
+
+.vaccine-item .btn:active {
+    background-color: #1f618d;
+}
+
+.vaccine-item .btn-secondary {
+    background-color: #7f8c8d;
+}
+
+.vaccine-item .btn-secondary:hover {
+    background-color: #6c7778;
+}
+
+.vaccine-item .btn-secondary:active {
+    background-color: #596364;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .vaccine-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .vaccine-item img {
+        height: 120px;
+    }
+
+    .vaccine-item h3 {
+        font-size: 16px;
+    }
+
+    .vaccine-item p {
+        font-size: 13px;
+    }
+
+    .vaccine-item .btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .vaccine-list {
+        grid-template-columns: 1fr;
+    }
+
+    .vaccine-item img {
+        height: 100px;
+    }
+
+    .vaccine-item h3 {
+        font-size: 14px;
+    }
+
+    .vaccine-item .btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,87 @@
+/* lichtiem.css */
+
+/* General styles for the section */
+.recent-appointments {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8f9fa; /* Light gray background for a clean look */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Title styling */
+.recent-appointments h2 {
+    font-size: 1.8em;
+    color: #2c3e50; /* Dark blue-gray for professionalism */
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0; /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+/* Appointment list container */
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between items */
+}
+
+/* Individual appointment item */
+.appointment-item {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Light shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.appointment-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
+}
+
+/* Info inside the appointment */
+.appointment-info h3 {
+    font-size: 1.4em;
+    color: #007bff; /* Blue for pet and vaccine names */
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+.appointment-info p {
+    font-size: 1em;
+    color: #6c757d; /* Muted gray for text */
+    margin: 8px 0;
+}
+
+.appointment-info p strong {
+    color: #343a40; /* Darker color for labels */
+    font-weight: 500;
+}
+
+/* No appointments message */
+.text-center {
+    text-align: center;
+}
+
+.text-gray {
+    color: #adb5bd; /* Light gray for empty state */
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recent-appointments {
+        padding: 15px;
+    }
+
+    .appointment-item {
+        padding: 15px;
+    }
+
+    .recent-appointments h2 {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,313 @@
+/* ===============================
+   🎨 PETCARE COLOR THEME (Cam - Xanh dương nhạt)
+   =============================== */
+
+/* Màu gốc */
+:root {
+  --main-orange: #F7941D;
+  --main-blue: #0099CC;
+  --light-blue: #E6F7FA;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --white: #FFFFFF;
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
+/* ===============================
+   BODY & TYPOGRAPHY
+   =============================== */
+body {
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   HEADER & NAVIGATION
+   =============================== */
+header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--main-blue);
+  transition: var(--transition);
+}
+
+.logo a:hover .logo-text {
+  color: var(--main-orange);
+  transform: scale(1.05);
+}
+
+.logo a:hover .logo-img {
+  transform: scale(1.1);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: block;
+}
+
+.menu a:hover {
+  color: var(--main-blue);
+  background-color: var(--light-blue);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   DROPDOWN MENU
+   =============================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white);
+  min-width: 200px;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition);
+  list-style: none;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  padding: 12px 20px;
+  border-radius: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--light-blue);
+  color: var(--main-blue);
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.dropdown-menu li:first-child a {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+/* ===============================
+   MAIN CONTENT
+   =============================== */
+.main-content {
+  flex: 1;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: calc(100vh - 140px);
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn {
+  background: linear-gradient(135deg, var(--main-orange), #ff9e33);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: var(--transition);
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff9e33, var(--main-orange));
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--main-blue), #00b0e6);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #00b0e6, var(--main-blue));
+}
+
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background: linear-gradient(135deg, var(--main-blue), #0077a3);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.footer-section p,
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  transition: var(--transition);
+}
+
+.footer-section a:hover {
+  color: var(--white);
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  
+  .menu {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 20px;
+  }
+  
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .menu a {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+

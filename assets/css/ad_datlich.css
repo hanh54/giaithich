@@ -1,0 +1,69 @@
+/* =========================================================
+   1. CONTAINER & LAYOUT CHUNG
+   ========================================================= */
+
+
+/* Container nội dung chính admin */
+.admin-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 20px;
+    min-height: calc(100vh - var(--header-height));
+    background-color: var(--light-blue); /* nền xanh nhạt */
+    padding-bottom: 80px; /* tránh footer đè nội dung */
+}
+
+
+/* Container chung dành cho dashboard admin */
+.ad-container {
+    margin-left: 280px; /* tạo khoảng cách với sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+
+
+
+
+
+/* =========================================================
+   2. TABLE STYLE — Kiểu bảng
+   ========================================================= */
+
+
+.table {
+    width: 100%;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+
+/* Header bảng */
+.table thead th {
+    background: var(--main-blue);
+    color: var(--white);
+    font-weight: 700;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 3px solid #0077a3;
+}
+
+
+/* Cell nội dung */
+.table tbody td {
+    padding: 12px 10px;
+    color: var(--text-dark);
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+
+
+

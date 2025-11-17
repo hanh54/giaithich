@@ -1,0 +1,342 @@
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Banner styles - ĐÃ SỬA */
+.banner {
+    position: relative;
+    text-align: center;
+    margin: 30px 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: none; /* Loại bỏ background xanh */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+}
+
+.banner h1 {
+    color: var(--main-blue);
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    
+}
+
+.banner-img {
+    width: 100%;
+    height: 450px; /* Chiều cao cố định cho banner */
+    object-fit: cover; /* Đảm bảo ảnh phủ kín không bị méo */
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.banner .btn {
+    display: inline-block;
+    background-color: var(--main-orange);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.banner .btn:hover {
+    background-color: #e6851a;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* Introduction section */
+.introduction {
+    background-color: var(--light-blue);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--main-blue);
+}
+
+.introduction h2 {
+    color: var(--main-blue);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.introduction p {
+    margin-bottom: 15px;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+/* Benefits section */
+.benefits {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.benefits h2 {
+    color: var(--main-blue);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--main-orange);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Available vaccines section */
+.available-vaccines {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: var(--light-blue);
+    border-radius: var(--border-radius);
+}
+
+.available-vaccines h2 {
+    color: var(--main-blue);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.vaccine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.vaccine-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.vaccine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.vaccine-item img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.vaccine-item h3 {
+    color: var(--main-blue);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.vaccine-item p {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.vaccine-item .btn {
+    display: inline-block;
+    background-color: var(--main-orange);
+    color: var(--white);
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.vaccine-item .btn:hover {
+    background-color: #e6851a;
+    transform: translateY(-2px);
+}
+
+/* Recent appointments section */
+.recent-appointments {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.recent-appointments h2 {
+    color: var(--main-blue);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.appointment-item {
+    background-color: var(--light-blue);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--main-orange);
+    transition: var(--transition);
+}
+
+.appointment-item:hover {
+    transform: translateX(5px);
+}
+
+.appointment-item p {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.appointment-item .btn {
+    display: inline-block;
+    background-color: var(--main-blue);
+    color: var(--white);
+    padding: 6px 15px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.appointment-item .btn:hover {
+    background-color: #0088b3;
+    transform: translateY(-2px);
+}
+
+/* FAQ section */
+.faq {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: var(--light-blue);
+    border-radius: var(--border-radius);
+}
+
+.faq h2 {
+    color: var(--main-blue);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.faq-item h3 {
+    color: var(--main-orange);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+    
+    .banner .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .introduction,
+    .benefits,
+    .available-vaccines,
+    .recent-appointments,
+    .faq {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .vaccine-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .introduction h2,
+    .benefits h2,
+    .available-vaccines h2,
+    .recent-appointments h2,
+    .faq h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.6rem;
+    }
+    
+    .banner {
+        padding: 20px 15px;
+    }
+}
