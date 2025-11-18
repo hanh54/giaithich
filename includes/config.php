@@ -25,8 +25,8 @@ define('DB_PASS', '');             // Thay đổi thành mật khẩu MySQL củ
  * 
  * @return mysqli|false Trả về kết nối cơ sở dữ liệu hoặc false nếu thất bại
  */
-function connectDatabase() {
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+function connectDatabase() {   //hàm có tên như này
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME); // kết nối được gán vào biến conn
     
     // Kiểm tra kết nối
     if ($conn->connect_error) {
@@ -35,7 +35,7 @@ function connectDatabase() {
     }
     
     // Thiết lập bộ mã hóa để xử lý ký tự tiếng Việt
-    $conn->set_charset("utf8mb4");
+    $conn->set_charset("utf8mb4");  //bộ mã hỗ trợ tiếng việt
     
     return $conn;
 }
@@ -53,7 +53,7 @@ if ($conn === false) {
  * @return string Chuỗi đã được làm sạch
  */
 function sanitizeInput($input) {
-    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8'); //làm sach dữ liệu, có khoảng trắng thì xóa khoảng trắng
 }
 
 // Thiết lập múi giờ mặc định
