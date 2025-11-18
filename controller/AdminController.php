@@ -1,13 +1,13 @@
 <?php
-namespace PetCare;
+namespace PetCare; //đặt lớp vào không gian tên
 
 
 class AdminController {
-    private $conn;
+    private $conn;   //lưu trữ đối tượng kết nối csdl
 
 
-    public function __construct() {
-        global $conn;
+    public function __construct() {  //tự động ngay khi đối tượng được 
+        global $conn;   //đưa biến toàn cục vào phạm vi hàm
 
 
         if (!isset($_SESSION['maTK']) || $_SESSION['vaiTro'] !== 'Admin') {
