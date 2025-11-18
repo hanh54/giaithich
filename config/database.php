@@ -30,8 +30,8 @@ class Database {
      * Hàm khởi tạo: Tự động kết nối khi tạo đối tượng
      * @throws PDOException Nếu kết nối thất bại
      */
-    public function __construct() {
-        $this->connect();
+    public function __construct() { // luôn tự động chạy khi tạo 1 object từ class
+        $this->connect(); //this là object hiện tại, khi constructor chạy, nó sẽ tự động gọi hàm kết nối database
     }
 
     /**
@@ -39,9 +39,9 @@ class Database {
      * @return PDO Kết nối database
      * @throws PDOException Nếu có lỗi kết nối
      */
-    private function connect() {
-        try {
-            $this->conn = new PDO(
+    private function connect() {  // là hàm riêng tư chỉ dùng bên trong 
+        try {  // chạy thử ở try, nếu lỗi sẽ sang catch
+            $this->conn = new PDO(  // tạo kết nối MySQL kiểu PDO + 3 tham số Chuỗi định danh nguồn dữ liệu
                 "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=utf8mb4",
                 $this->username,
                 $this->password
@@ -58,7 +58,7 @@ class Database {
      * Trả về kết nối để các lớp Model sử dụng
      * @return PDO
      */
-    public function getConnection() {
+    public function getConnection() { //Truyền đối tượng kết nối đã tạo ra ngoài lớp.
         return $this->conn;
     }
 
@@ -83,7 +83,7 @@ class Utils {
         if (is_array($input)) {
             return array_map([self::class, 'sanitizeInput'], $input);
         }
-        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8'); //trim là khoảng trắng, chuyển đổi ký tự đặc biệt biệt có nghĩa trong html
     }
 
     /**
