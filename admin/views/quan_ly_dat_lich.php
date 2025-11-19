@@ -6,9 +6,9 @@
 
 
     <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Khách Hàng</th>
+        <thead>  // tiêu đề 1 bảng
+            <tr>   // theo hàng ngang
+                <th>Khách Hàng</th>   // chữ đậm canh giữa
                 <th>Thú cưng</th>
                 <th>Dịch vụ</th>
                 <th>Ngày đặt lịch</th>
@@ -17,7 +17,7 @@
                 <th>Hành động</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody>  // bắt đầu nội dung bảng
             <?php
             $colors = ['Đã xác nhận'=>'green','Đang thực hiện'=>'orange','Hoàn thành'=>'blue','Hủy'=>'red'];
             foreach ($danhSach as $item): ?>
@@ -33,7 +33,7 @@
                             <input type="hidden" name="maLich" value="<?= $item['MaLich'] ?>">
                             <select name="trangThai" class="form-select" onchange="this.form.submit()">
                                 <option value="" disabled selected>Chọn hành động</option>
-                                <?php foreach(array_keys($colors) as $tt): ?>
+                                <?php foreach(arry_keys($acolors) as $tt): ?>
                                     <option value="<?= $tt ?>"><?= $tt ?></option>
                                 <?php endforeach; ?>
                             </select>
